@@ -4,6 +4,8 @@ var queryString = require('query-string');
 var api = require('../utils/api');
 var Link = require('react-router-dom').Link;
 var PlayerPreview = require('./PlayerPreview');
+var Loading = require('./Loading');
+
 
 function Profile (props) {
   var info = props.info;
@@ -87,7 +89,7 @@ constructor(props) {
     var loading = this.state.loading;
 
     if (loading === true) {
-      return <p> Loading </p>
+      return <Loading />
     }
 
     if (error) {
